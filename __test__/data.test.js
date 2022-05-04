@@ -1,8 +1,17 @@
 const fs = require("fs");
-const { data } = require("../data/db.json");
+const { data } = require("../db/db.json");
+const { createANote} = require("../lib/data");
+
+jest.mock("fs");
 
 
+test("to find creation of a note" , () => {
+    const addNote = createANote({
+        title: "Title", 
+        text: "text"
+    });
+    expect(addNote.title).toBe("Title");
+    expect(addNote.text).toBe("text");
 
-// test{"creation of a note"};
-test("to find specific notes by id");
-test("to delete a note");
+});
+// test("to delete a note");
