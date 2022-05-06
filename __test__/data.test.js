@@ -14,4 +14,4 @@ test("to find creation of a note" , () => {
     expect(addNote.text).toBe("text");
 
 });
-// test("to delete a note");
+//
